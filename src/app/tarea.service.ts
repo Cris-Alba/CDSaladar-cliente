@@ -18,12 +18,12 @@ export class TareaService {
     return this.http.post('http://localhost:8090/api/tareas',tarea);
   }
 
-  update(id: number, tarea:any){
-    return this.http.put('http://localhost:8090/api/tareas/' + id,tarea);
+  update(href: string, tarea:any){
+    return this.http.put(href, tarea);
   }
 
-  delete(id: number){
-    return this.http.delete('http://localhost:8090/api/tareas/' + id);
+  delete(href: string){
+    return this.http.delete(href);
   }
 
 }
